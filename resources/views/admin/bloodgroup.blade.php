@@ -29,7 +29,7 @@
                         <td>{{ $blood->group }}</td>
                         <td>
                             <a href="{{ route('editblood', $blood->id) }}" class="btn btn-primary">Edit</a>
-                            <a href="{{ $blood->id }}" class="btn btn-warning">Delete</a>
+                            <a href="{{ route('deleteblood', $blood->id) }}" class="btn btn-warning">Delete</a>
                         </td>
                       </tr>
                     @endforeach
