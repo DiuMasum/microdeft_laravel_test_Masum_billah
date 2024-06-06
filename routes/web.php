@@ -26,7 +26,14 @@ require __DIR__.'/auth.php';
 Route::middleware('auth')->group(function () {
     Route::controller(DashboardController::class)->group(function () {
         Route::get('/admin/dashboard', 'index')->name('admindashboard');
+        Route::get('/admin/blood-group', 'BloodGroup')->name('bloodgroup');
+        Route::get('/admin/edit-blood/{id}', 'Editblood')->name('editblood');
+        Route::post('/admin/update-blood', 'Updateblood')->name('updateblood');
+        Route::get('/admin/delete-blood/{id}', 'DeleteBlood')->name('deleteblood');
+        Route::get('/admin/doonerlist', 'Doonerlist')->name('doonerlist');
     });
+
+
 
 
 });
